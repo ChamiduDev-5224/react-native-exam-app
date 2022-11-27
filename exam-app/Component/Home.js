@@ -13,7 +13,7 @@ import {
   ActivityIndicator,
 } from "react-native";
 import axios from "axios";
-export default function Home() {
+export default function Home({ navigation }) {
   const [data, setData] = useState([]);
   const [indexNo, setIndexNo] = useState("");
 
@@ -111,7 +111,12 @@ export default function Home() {
               <Text style={styles.btGroupText}>Sem 03</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.buttonGroup}>
-              <Text style={styles.btGroupText}>Sem 04</Text>
+              {/* <Text
+                style={styles.btGroupText}
+                onPress={() => navigation.navigate("Sem1", { name: "Jane" })}
+              >
+                Sem 04
+              </Text> */}
             </TouchableOpacity>
           </View>
         </View>
